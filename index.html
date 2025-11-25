@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shai Shillo | Full-Stack Software Engineer & AI Backend Specialist</title>
+    <meta name="description"
+        content="Portfolio of Shai Shillo, a Software Engineer specializing in Python, Node.js, Cloud Architecture, and AI-driven systems. View projects and experience.">
+    <meta name="keywords"
+        content="Software Engineer, Backend Developer, AI Engineer, Python, FastAPI, Node.js, GCP, PostGIS, Full-Stack">
+    <meta name="author" content="Shai Shillo">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shaishillo.com/">
+    <meta property="og:title" content="Shai Shillo | Full-Stack Software Engineer & AI Backend Specialist">
+    <meta property="og:description"
+        content="Portfolio of Shai Shillo, a Software Engineer specializing in Python, Node.js, Cloud Architecture, and AI-driven systems.">
+    <meta property="og:image" content="assets/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://shaishillo.com/">
+    <meta property="twitter:title" content="Shai Shillo | Full-Stack Software Engineer & AI Backend Specialist">
+    <meta property="twitter:description"
+        content="Portfolio of Shai Shillo, a Software Engineer specializing in Python, Node.js, Cloud Architecture, and AI-driven systems.">
+    <meta property="twitter:image" content="assets/og-image.jpg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;600;700;800&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Shai Shillo",
+      "jobTitle": "Software Engineer",
+      "url": "https://shaishillo.com",
+      "sameAs": [
+        "https://www.linkedin.com/in/shai-shillo",
+        "https://github.com/ShaiShillo"
+      ],
+      "alumniOf": "Holon Institute of Technology",
+      "knowsAbout": ["Python", "Machine Learning", "Cloud Computing", "Backend Architecture"]
+    }
+    </script>
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Shai Shillo<span class="accent">.</span></a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#diplomas">Diplomas</a>
+                <a href="#contact">Contact</a>
+                <a href="assets/Shai_Shillo_One_Page_Resume.pdf" target="_blank" class="btn btn-outline">Resume</a>
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container hero-content">
+            <p class="hero-greeting">Hi, my name is</p>
+            <h1 class="hero-name">Shai Shillo.</h1>
+            <h2 class="hero-subtitle">I build <span class="typing-text"></span></h2>
+            <p class="hero-description">
+                I'm a software engineer specializing in high-performance backend architecture, microservices, and
+                automated extraction pipelines. I bridge the gap between AI research and production-grade software.
+            </p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="assets/Shai_Shillo_One_Page_Resume.pdf" target="_blank" class="btn btn-primary">Resume</a>
+                <a href="https://www.linkedin.com/in/shai-shillo" target="_blank" class="btn btn-outline">LinkedIn</a>
+                <a href="#contact" class="btn btn-outline">Get In Touch</a>
+            </div>
+        </div>
+        <!-- 3D Background Container -->
+        <div id="canvas-container"></div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">01.</span> About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I’m a software engineer who thrives at the intersection of <strong>complex data</strong> and
+                        <strong>scalable infrastructure</strong>. With a background in building AI extraction backends
+                        and real-time interactive systems, I love solving hard problems—whether that’s optimizing a
+                        PostGIS query or architecting a microservices mesh on GCP.
+                    </p>
+                    <p>
+                        Beyond the terminal, I’m passionate about sharing knowledge. Having mentored students at
+                        <strong>H.I.T.</strong>, I believe that clear communication is just as important as clean code.
+                        I build systems that are robust, efficient, and ready for the real world.
+                    </p>
+                    <p>Here are a few technologies I've been working with recently:</p>
+                    <ul class="skills-list">
+                        <li>Python (FastAPI)</li>
+                        <li>Node.js</li>
+                        <li>React</li>
+                        <li>Docker & Kubernetes</li>
+                        <li>PostgreSQL (PostGIS)</li>
+                        <li>GCP</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <img src="assets/profile.png" alt="Shai Shillo" class="profile-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">02.</span> Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <div class="skill-tags">
+                        <span>Python</span>
+                        <span>JavaScript (ES6+)</span>
+                        <span>Java</span>
+                        <span>Kotlin</span>
+                        <span>C++</span>
+                        <span>SQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend & Cloud</h3>
+                    <div class="skill-tags">
+                        <span>Node.js</span>
+                        <span>FastAPI</span>
+                        <span>Express.js</span>
+                        <span>Docker</span>
+                        <span>Kubernetes</span>
+                        <span>GCP</span>
+                        <span>Linux/Bash</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Data & AI</h3>
+                    <div class="skill-tags">
+                        <span>PostgreSQL</span>
+                        <span>MongoDB</span>
+                        <span>PostGIS</span>
+                        <span>PyTorch</span>
+                        <span>OpenCV</span>
+                        <span>Redis</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Frontend & Tools</h3>
+                    <div class="skill-tags">
+                        <span>React</span>
+                        <span>Three.js</span>
+                        <span>Git</span>
+                        <span>CI/CD</span>
+                        <span>RESTful APIs</span>
+                        <span>WebSockets</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">03.</span> Some Things I've Built</h2>
+
+            <!-- Project 1: ParkerAI -->
+            <div class="project-card">
+                <div class="project-image">
+                    <div class="carousel" id="carousel-parker">
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="assets/parker-ai-00.png" alt="ParkerAI 1"></div>
+                            <div class="carousel-slide"><img src="assets/parker-ai-01.png" alt="ParkerAI 2"></div>
+                            <div class="carousel-slide"><img src="assets/parker-ai-02.png" alt="ParkerAI 3"></div>
+                            <div class="carousel-slide"><img src="assets/parker-ai-03.png" alt="ParkerAI 4"></div>
+                            <div class="carousel-slide"><img src="assets/parker-ai-04.png" alt="ParkerAI 5"></div>
+                            <div class="carousel-slide"><img src="assets/parker-ai-05.png" alt="ParkerAI 6"></div>
+                            <!-- <div class="carousel-slide"><img src="assets/parker-ai-06.png" alt="ParkerAI 7"></div> -->
+                        </div>
+                        <div class="carousel-indicators"></div>
+                        <button class="carousel-btn prev"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg></button>
+                        <button class="carousel-btn next"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg></button>
+                    </div>
+                </div>
+
+                <div class="project-content">
+                    <p class="project-overline">Featured Project</p>
+                    <h3 class="project-title"><a href="https://github.com/parkingLotsNotifier" target="_blank">ParkerAI
+                            – Smart Parking</a></h3>
+                    <div class="project-description">
+                        <p>
+                            An ML-powered ecosystem that predicts parking availability in real-time using computer
+                            vision. Solves the urban problem of wasted time searching for spots by integrating real-time
+                            video feed analysis.
+                        </p>
+                    </div>
+                    <ul class="project-tech-list">
+                        <li>Python</li>
+                        <li>PyTorch</li>
+                        <li>OpenCV</li>
+                        <li>Node.js</li>
+                        <li>MongoDB</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/parkingLotsNotifier" target="_blank" aria-label="GitHub Link"><svg
+                                xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="feather feather-github">
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Project 2: Campus-Nav -->
+            <div class="project-card right-aligned">
+                <div class="project-content">
+                    <p class="project-overline">Featured Project</p>
+                    <h3 class="project-title"><a href="https://shaishillo.github.io/Campus-Nav/"
+                            target="_blank">Campus-Nav</a></h3>
+                    <div class="project-description">
+                        <p>
+                            A 3D interactive web map offering real-time tracking and Point-of-Interest (POI)
+                            discovery.
+                            Features seamless 3D rendering in the browser with offline capabilities via IndexedDB.
+                        </p>
+                    </div>
+                    <ul class="project-tech-list">
+                        <li>Three.js</li>
+                        <li>QGIS2threejs</li>
+                        <li>IndexedDB</li>
+                        <li>JavaScript</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/ShaiShillo/Campus-Nav" target="_blank" aria-label="GitHub Link"><svg
+                                xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="feather feather-github">
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                </path>
+                            </svg></a>
+                        <a href="https://shaishillo.github.io/Campus-Nav/" target="_blank" aria-label="External Link">
+                            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="feather feather-external-link">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-image">
+                    <div class="carousel" id="carousel-campus">
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="assets/campus-nav-00.png" alt="Campus-Nav 1">
+                            </div>
+                            <div class="carousel-slide"><img src="assets/campus-nav-01.png" alt="Campus-Nav 2">
+                            </div>
+                            <div class="carousel-slide"><img src="assets/campus-nav-02.png" alt="Campus-Nav 3">
+                            </div>
+                            <div class="carousel-slide"><img src="assets/campus-nav-03.png" alt="Campus-Nav 4">
+                            </div>
+                            <div class="carousel-slide"><img src="assets/campus-nav-04.png" alt="Campus-Nav 5">
+                            </div>
+                        </div>
+                        <div class="carousel-indicators"></div>
+                        <button class="carousel-btn prev"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg></button>
+                        <button class="carousel-btn next"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: MERN Admin Dashboard -->
+            <div class="project-card">
+                <div class="project-image">
+                    <div class="carousel" id="carousel-mern">
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="assets/mern-dashboard-00.png" alt="MERN Dashboard 1">
+                            </div>
+                            <div class="carousel-slide"><img src="assets/mern-dashabord-01.png" alt="MERN Dashboard 2">
+                            </div>
+                            <div class="carousel-slide"><img src="assets/mern-dashboard-02.png" alt="MERN Dashboard 3">
+                            </div>
+                            <div class="carousel-slide"><img src="assets/mern-dashboard-03.png" alt="MERN Dashboard 4">
+                            </div>
+                            <div class="carousel-slide"><img src="assets/mern-dashboard-04.png" alt="MERN Dashboard 5">
+                            </div>
+                            <div class="carousel-slide"><img src="assets/mern-dashboard-05.png" alt="MERN Dashboard 6">
+                            </div>
+                            <div class="carousel-slide"><img src="assets/mern-dashboard-06.png" alt="MERN Dashboard 7">
+                            </div>
+                            <div class="carousel-slide"><img src="assets/mern-dashboard-07.png" alt="MERN Dashboard 8">
+                            </div>
+                        </div>
+                        <div class="carousel-indicators"></div>
+                        <button class="carousel-btn prev"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg></button>
+                        <button class="carousel-btn next"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg></button>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <p class="project-overline">Featured Project</p>
+                    <h3 class="project-title"><a href="https://mern-admin-dashboard-frontend-ob7l.onrender.com/"
+                            target="_blank">MERN Admin Dashboard</a></h3>
+                    <div class="project-description">
+                        <p>
+                            A comprehensive analytics dashboard for managing data and user insights. Built with a
+                            responsive design and real-time data visualization capabilities.
+                        </p>
+                    </div>
+                    <ul class="project-tech-list">
+                        <li>React</li>
+                        <li>Material UI</li>
+                        <li>Node.js</li>
+                        <li>MongoDB</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/ShaiShillo/MERN-Admin-Dashboard" target="_blank"
+                            aria-label="GitHub Link"><svg xmlns="http://www.w3.org/2000/svg" role="img"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://mern-admin-dashboard-frontend-ob7l.onrender.com/" target="_blank"
+                            aria-label="External Link">
+                            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="feather feather-external-link">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4: Fitness Training App -->
+            <div class="project-card right-aligned">
+                <div class="project-content">
+                    <p class="project-overline">Featured Project</p>
+                    <h3 class="project-title"><a href="https://github.com/ShaiShillo/Fitness-Training-App"
+                            target="_blank">Fitness Training App</a></h3>
+                    <div class="project-description">
+                        <p>
+                            Native Android app for workout planning. Features MVVM architecture, Room database, and
+                            background sync services.
+                        </p>
+                    </div>
+                    <ul class="project-tech-list">
+                        <li>Kotlin</li>
+                        <li>Android</li>
+                        <li>MVVM</li>
+                        <li>Room</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/ShaiShillo/Fitness-Training-App" target="_blank"
+                            aria-label="GitHub Link">
+                            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="feather feather-github">
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-image">
+                    <video controls muted loop playsinline>
+                        <source src="assets/kotlin-fitness-app-project-video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <!-- Project 5: Calorie Tracker -->
+            <div class="project-card">
+                <div class="project-image">
+                    <video controls muted loop playsinline>
+                        <source src="assets/FED Project demo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="project-content">
+                    <p class="project-overline">Featured Project</p>
+                    <h3 class="project-title"><a href="#" onclick="return false;">Calorie Tracker</a></h3>
+                    <div class="project-description">
+                        <p>
+                            A comprehensive application for tracking daily calorie intake and nutritional goals.
+                            Demonstrates complex data management and user-friendly interface design.
+                        </p>
+                    </div>
+                    <ul class="project-tech-list">
+                        <li>React</li>
+                        <li>Node.js</li>
+                        <li>MongoDB</li>
+                    </ul>
+                    <div class="project-links">
+                        <!-- No links provided -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Projects Grid -->
+            <h3 class="other-projects-title">Other Noteworthy Projects</h3>
+            <div class="other-projects-grid">
+                <!-- Project 6: Daily Cost Manager -->
+                <div class="other-project-card">
+                    <div class="folder-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-folder">
+                            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="other-project-links">
+                        <a href="https://github.com/ShaiShillo/Daily-Cost-Manager" target="_blank"
+                            aria-label="GitHub Link"><svg xmlns="http://www.w3.org/2000/svg" role="img"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                    <h4 class="other-project-title">Daily Cost Manager</h4>
+                    <p class="other-project-desc">
+                        A robust RESTful API service for tracking personal finances. Implemented secure JWT
+                        authentication and complex aggregation pipelines.
+                    </p>
+                    <ul class="other-project-tech">
+                        <li>Node.js</li>
+                        <li>Express</li>
+                        <li>MongoDB</li>
+                    </ul>
+                </div>
+
+                <!-- Project 7: Climate Trends Prediction -->
+                <div class="other-project-card">
+                    <div class="folder-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-folder">
+                            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="other-project-links">
+                        <a href="https://github.com/ShaiShillo/climate-trends-prediction" target="_blank"
+                            aria-label="GitHub Link"><svg xmlns="http://www.w3.org/2000/svg" role="img"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                </path>
+                            </svg></a>
+                    </div>
+                    <h4 class="other-project-title">Climate Trends Prediction</h4>
+                    <p class="other-project-desc">
+                        Analysis and prediction of global climate trends using machine learning models.
+                    </p>
+                    <ul class="other-project-tech">
+                        <li>Python</li>
+                        <li>Scikit-learn</li>
+                        <li>Pandas</li>
+                    </ul>
+                </div>
+
+                <!-- Project 8: ML Flow Titanic -->
+                <div class="other-project-card">
+                    <div class="folder-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-folder">
+                            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="other-project-links">
+                        <a href="https://github.com/ShaiShillo/ML-Flow-Titanic" target="_blank"
+                            aria-label="GitHub Link"><svg xmlns="http://www.w3.org/2000/svg" role="img"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                </path>
+                            </svg></a>
+                    </div>
+                    <h4 class="other-project-title">ML Flow Titanic</h4>
+                    <p class="other-project-desc">
+                        End-to-end ML pipeline for the Titanic survival prediction challenge using MLflow.
+                    </p>
+                    <ul class="other-project-tech">
+                        <li>Python</li>
+                        <li>MLflow</li>
+                        <li>Jupyter Notebook</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">04.</span> Where I've Worked</h2>
+            <div class="experience-container">
+                <div class="experience-tabs">
+                    <button class="tab-btn active" data-target="siftt">Siftt.AI</button>
+                    <button class="tab-btn" data-target="hit">H.I.T.</button>
+                    <button class="tab-btn" data-target="aig">AIG</button>
+                </div>
+                <div class="experience-content">
+                    <div id="siftt" class="job-panel active">
+                        <h3>Software Engineer (Backend) <span class="company">@ Siftt.AI</span></h3>
+                        <p class="job-duration">202X - Present</p>
+                        <ul class="job-description">
+                            <li>Architected AI extraction pipelines using <strong>FastAPI</strong> and
+                                <strong>Docker</strong> on <strong>GCP</strong>.
+                            </li>
+                            <li>Managed complex spatial data with <strong>PostgreSQL</strong> and
+                                <strong>PostGIS</strong>.
+                            </li>
+                            <li>Led the migration to a microservices architecture, improving system scalability and
+                                maintainability.</li>
+                        </ul>
+                    </div>
+                    <div id="hit" class="job-panel">
+                        <h3>Academic Practitioner & Coordinator <span class="company">@ H.I.T.</span></h3>
+                        <p class="job-duration">20XX - 20XX</p>
+                        <ul class="job-description">
+                            <li>Taught Software Engineering, Java, and Design Patterns to undergraduates.</li>
+                            <li>Mentored students on <strong>Git</strong>, <strong>CI/CD</strong>, and agile best
+                                practices.</li>
+                            <li>Coordinated student union activities and academic support programs.</li>
+                        </ul>
+                    </div>
+                    <div id="aig" class="job-panel">
+                        <h3>Customer Service & Sales <span class="company">@ AIG</span></h3>
+                        <p class="job-duration">20XX - 20XX</p>
+                        <ul class="job-description">
+                            <li>Honed communication and leadership skills by training teams.</li>
+                            <li>Mentored colleagues and promoted sales initiatives.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diplomas Section -->
+    <section id="diplomas" class="section diplomas">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">05.</span> Diplomas & Certifications</h2>
+            <div class="diplomas-grid">
+                <!-- Diploma 1: President's List -->
+                <div class="diploma-card">
+                    <div class="diploma-header">
+                        <div class="diploma-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                            </svg>
+                        </div>
+                        <h3 class="diploma-title">President's List Diploma</h3>
+                        <p class="diploma-institution">Holon Institute of Technology</p>
+                    </div>
+                    <div class="diploma-preview">
+                        <img src="assets/president-list-img.png" alt="President's List Diploma" class="diploma-image" />
+                    </div>
+                    <div class="diploma-actions">
+                        <a href="assets/president's-list-diploma.pdf" target="_blank" class="btn btn-outline">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                            View Full Document
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Diploma 2: Degree Certificate -->
+                <div class="diploma-card">
+                    <div class="diploma-header">
+                        <div class="diploma-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="8" r="7"></circle>
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="diploma-title">Degree Certificate <span class="diploma-honor">Cum laude</span></h3>
+                        <p class="diploma-institution">Holon Institute of Technology</p>
+                    </div>
+                    <div class="diploma-preview">
+                        <img src="assets/diploma.jpeg" alt="Degree Certificate" class="diploma-image" />
+                    </div>
+                    <div class="diploma-actions">
+                        <a href="assets/diploma.jpeg" target="_blank" class="btn btn-outline">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                            View Full Document
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container contact-container">
+            <p class="section-number">06. What's Next?</p>
+            <h2 class="contact-title">Get In Touch</h2>
+            <p class="contact-text">
+                I'm currently open to new opportunities in Backend and Full-Stack Engineering. If you're looking for
+                someone who can bridge the gap between AI research and production-grade software, let's talk.
+            </p>
+            <a href="mailto:ShaiShillo@gmail.com" class="btn btn-primary btn-large">Say Hello</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://github.com/ShaiShillo" target="_blank" aria-label="GitHub"><svg
+                        xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-github">
+                        <path
+                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                        </path>
+                    </svg></a>
+                <a href="https://www.linkedin.com/in/shai-shillo" target="_blank" aria-label="LinkedIn"><svg
+                        xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-linkedin">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg></a>
+            </div>
+            <p class="copyright">Designed & Built by Shai Shillo</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
